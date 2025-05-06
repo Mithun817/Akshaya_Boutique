@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Akshaya Boutique Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Akshaya Boutique Management</h2>
+
+    <!-- Nav Tabs -->
+    <ul class="nav nav-tabs" id="boutiqueTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#customersTab">Customers</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#measurementsTab">Measurements</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cashmemoTab">Cash Memo</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#incomeTab">Income & Expenses</button>
+        </li>
+    </ul>
+
+    <!-- Tab Contents -->
+    <div class="tab-content mt-4">
+
+        <!-- Customers Form -->
+        <div class="tab-pane fade show active" id="customersTab">
+            <form id="customerForm">
+                <div class="mb-3">
+                    <label class="form-label">Customer ID</label>
+                    <input type="text" name="cus_id" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" name="cus_name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Contact No</label>
+                    <input type="text" name="contact" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Place</label>
+                    <input type="text" name="place" class="form-control">
+                </div>
+                <button class="btn btn-primary" type="submit">Save Customer</button>
+            </form>
+        </div>
+
+        <!-- Measurements Form -->
+        <div class="tab-pane fade" id="measurementsTab">
+            <form id="measurementsForm">
+                <div class="row g-3">
+                    <div class="col-md-6"><label class="form-label">Customer ID</label><input type="text" name="cus_id" class="form-control"></div>
+                    <div class="col-md-6"><label class="form-label">Name</label><input type="text" name="cus_name" class="form-control"></div>
+                    <div class="col-md-6"><label class="form-label">Contact No</label><input type="text" name="contact" class="form-control"></div>
+                    <div class="col-md-6"><label class="form-label">Date</label><input type="date" name="date" class="form-control"></div>
+
+                    <!-- Measurement Fields -->
+                    <div class="col-md-3"><input placeholder="Chest Round" name="chest_round" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Hip Round" name="hip_round" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Seat" name="seat" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Shoulder" name="shoulder" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Armhole" name="armhole" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Front Neck" name="f_neck" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Back Neck" name="b_neck" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Sleeve Length" name="sleeve_length" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Sleeve Round" name="sleeve_round" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Height" name="height" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Belt" name="belt" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Leg Round" name="leg_round" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Churidhar" name="churidhar" class="form-control"></div>
+                    <div class="col-md-3"><input placeholder="Blouse" name="blouse" class="form-control"></div>
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Save Measurements</button>
+            </form>
+        </div>
+
+        <!-- CashMemo Form -->
+        <div class="tab-pane fade" id="cashmemoTab">
+            <form id="cashmemoForm">
+                <div class="row g-3">
+                    <div class="col-md-4"><label class="form-label">Customer ID</label><input type="text" name="cus_id" class="form-control"></div>
+                    <div class="col-md-4"><label class="form-label">Name</label><input type="text" name="cus_name" class="form-control"></div>
+                    <div class="col-md-4"><label class="form-label">Date</label><input type="date" name="date" class="form-control"></div>
+                    <div class="col-12"><label class="form-label">Description</label><textarea name="description" class="form-control"></textarea></div>
+                    <div class="col-md-3"><input placeholder="Quantity" name="quantity" class="form-control" type="number"></div>
+                    <div class="col-md-3"><input placeholder="Rate" name="rate" class="form-control" type="number" step="0.01"></div>
+                    <div class="col-md-3"><input placeholder="Amount" name="amount" class="form-control" type="number" step="0.01"></div>
+                    <div class="col-md-3"><input placeholder="Total" name="total" class="form-control" type="number" step="0.01"></div>
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Save CashMemo</button>
+            </form>
+        </div>
+
+        <!-- Income & Expenses Form -->
+        <div class="tab-pane fade" id="incomeTab">
+            <form id="incomeForm">
+                <div class="row g-3">
+                    <div class="col-md-6"><label class="form-label">Income Description</label><textarea name="income_description" class="form-control"></textarea></div>
+                    <div class="col-md-6"><label class="form-label">Income Amount</label><input type="number" name="income_amount" class="form-control" step="0.01"></div>
+                    <div class="col-md-6"><label class="form-label">Expenses Description</label><textarea name="expenses_description" class="form-control"></textarea></div>
+                    <div class="col-md-6"><label class="form-label">Expenses Amount</label><input type="number" name="expenses_amount" class="form-control" step="0.01"></div>
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Save Income & Expenses</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
